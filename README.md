@@ -35,4 +35,4 @@ Para probar e instalar la extensión en tu propio navegador:
 6. ¡Listo! Verás el icono de la extensión activarse y funcionará en segundo plano durante tus próximas descargas.
 
 ---
-*Hecho para limpiar apuntes con la eficiencia de un buen gulag.*
+
