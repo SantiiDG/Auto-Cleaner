@@ -1,3 +1,16 @@
+// === ESTADO DE LA EXTENSIÓN ===
+let isExtensionEnabled = true;
+
+chrome.storage.local.get({ isEnabled: true }, (result) => {
+  isExtensionEnabled = result.isEnabled;
+});
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace === 'local' && changes.isEnabled !== undefined) {
+    isExtensionEnabled = changes.isEnabled.newValue;
+  }
+});
+
 // Diccionario temporal para guardar los nombres de los blobs (indexado por downloadId)
 const pendingDownloads = {};
 
@@ -13,6 +26,12 @@ function notify(title, message) {
 
 // === INTERCEPTOR DE DESCARGAS ===
 chrome.downloads.onDeterminingFilename.addListener((item, suggest) => {
+  // Si la extensión está desactivada, ignoramos todas las descargas
+  if (!isExtensionEnabled) {
+    suggest();
+    return;
+  }
+
   // 1. Si es nuestro PDF ya limpio, forzamos su nombre usando el downloadId
   if (pendingDownloads[item.id]) {
     suggest({ filename: pendingDownloads[item.id] });
