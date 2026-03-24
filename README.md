@@ -1,5 +1,4 @@
-# ☭ Auto-Cleaner PDF (Wuolah)
-
+#  Auto-Cleaner PDF 
 ![Auto-Cleaner PDF Icon](icon128.png)
 
 Una extensión de Google Chrome (Manifest V3) que intercepta automáticamente las descargas de PDFs procedentes de Wuolah, elimina la publicidad incrustada utilizando el motor **GulagCleaner** (ejecutado de forma nativa en el navegador mediante WebAssembly) y guarda el archivo resultante completamente limpio.
