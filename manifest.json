@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Auto-Cleaner PDF",
-  "version": "1.0",
-  "description": "Intercepta descargas de PDFs, les quita la publicidad con GulagCleaner y los guarda como CLEANED.",
+  "version": "1.0.1",
+  "description": "Intercepta descargas de PDFs, les quita la publicidad y los guarda como CLEANED.",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
