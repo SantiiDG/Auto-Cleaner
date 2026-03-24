@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto-Cleaner PDF",
+  "version": "1.0",
+  "description": "Intercepta descargas de PDFs, les quita la publicidad con GulagCleaner y los guarda como CLEANED.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "downloads",
+    "offscreen",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

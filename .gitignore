@@ -1,0 +1,7 @@
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos WASM generados (se pueden regenerar con wasm-pack)
+# gulagcleaner_bg.wasm
+# gulagcleaner.js
