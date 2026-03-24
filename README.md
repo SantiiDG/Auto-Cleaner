@@ -3,6 +3,17 @@
 
 Una extensión de Google Chrome (Manifest V3) que intercepta automáticamente las descargas de PDFs con publicidad incrustada, elimina las páginas promocionales utilizando el motor **GulagCleaner** (ejecutado de forma nativa en el navegador mediante WebAssembly) y guarda el archivo resultante completamente limpio.
 
+## 🚀 Instalación Rápida (Cargar Descomprimida)
+
+Para probar e instalar la extensión en tu propio navegador:
+
+1. Clona este repositorio o descarga el código fuente y extráelo en una carpeta.
+2. Abre Google Chrome y escribe en la barra de direcciones: `chrome://extensions/`
+3. Activa el **Modo de desarrollador** (es un interruptor en la esquina superior derecha).
+4. Haz clic en el botón **Cargar descomprimida** (*Load unpacked*), arriba a la izquierda.
+5. Selecciona la carpeta del proyecto.
+6. ¡Listo! Verás el icono de la extensión activarse y funcionará en segundo plano durante tus próximas descargas.
+
 ## ✨ Características Principales
 
 - 🛡️ **Procesamiento 100% Local**: La limpieza del PDF se hace enteramente en la memoria de tu navegador gracias a **WebAssembly (WASM)**. Tus documentos no se envían a ningún servidor externo, garantizando máxima privacidad y velocidad.
@@ -23,13 +34,4 @@ Desarrollar extensiones en Manifest V3 presenta retos específicos para tareas p
 3. **El Motor WASM (`gulagcleaner_bg.wasm`)**: 
    El núcleo escrito en **Rust** de GulagCleaner, compilado a WebAssembly. Manipula la estructura del PDF a nivel de bytes de forma extraordinariamente eficiente.
 
-## 🚀 Instalación Rápida (Cargar Descomprimida)
 
-Para probar e instalar la extensión en tu propio navegador:
-
-1. Clona este repositorio o descarga el código fuente y extráelo en una carpeta.
-2. Abre Google Chrome y escribe en la barra de direcciones: `chrome://extensions/`
-3. Activa el **Modo de desarrollador** (es un interruptor en la esquina superior derecha).
-4. Haz clic en el botón **Cargar descomprimida** (*Load unpacked*), arriba a la izquierda.
-5. Selecciona la carpeta del proyecto.
-6. ¡Listo! Verás el icono de la extensión activarse y funcionará en segundo plano durante tus próximas descargas.
